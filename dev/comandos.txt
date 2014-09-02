@@ -1,5 +1,0 @@
-I had the same problem. And to fix it, I copy the Zipalign file from sdk/build-tools/android-4.4W folder to sdk/tools/
-
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore C:\Users\edersonbuss\portal-emissor-mobile\platforms\android\ant-build\portalemissormobile-release-unsigned.apk alias_name
-
-zipalign -v 4 C:\\Users\\edersonbuss\\portal-emissor-mobile\\platforms\\android\\ant-build\\portalemissormobile-release-unsigned.apk portalemissormobile.apk
