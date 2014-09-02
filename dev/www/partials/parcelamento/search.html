@@ -1,0 +1,53 @@
+
+ <!--  
+  <script id="contact.html" type="text/ng-template">
+      <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-icon ion-arrow-left-c">
+        </ion-nav-back-button>
+      </ion-nav-bar> 
+      <ion-view title="Contact">
+
+        <ion-content>
+          <p>@IonicFramework</p>
+          <p>@DriftyCo</p>
+        </ion-content>
+      </ion-view>
+    </script>-->
+
+
+      <ion-view title="Event Attendees">
+     	 <ion-nav-bar class="bar-positive">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+          </button> 
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-content padding="true">
+         <h1>Search</h1>
+         
+         <form >
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="Inform o nome o cnpj?" ng-model="filtro.cnpj">
+            </label>
+
+            <label class="item item-input">
+              <input type="text" placeholder="Inform o diaVencimento?" ng-model="filtro.diaVencimento">
+            </label>
+
+            <label class="item item-input">
+              <input type="text" placeholder="Inform o valor?" ng-model="filtro.valor">
+            </label>
+          </div>
+          <div class="padding">
+            <button ui-sref ="app.parcelamento.list({cnpj: filtro.cnpj,dia_vencimento:filtro.diaVencimento,valor:filtro.valor})"  class="button icon icon-right ion-chevron-right">Simula </button>
+          </div>
+        </form>
+    
+    
+       
+        
+          
+        </ion-content>
+      </ion-view>
+<ion-nav-view name="list-tab"></ion-nav-view>

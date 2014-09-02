@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" sizes="196x196" href="public/img/icon.png">
+<title>Portal Mobile</title>
+<link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+-->
+<!-- 
+ * ionic.bundle.js is a concatenation of:
+ * ionic.js, angular.js, angular-animate.js,
+ * angular-sanitize.js, angular-ui-router.js,
+ * and ionic-angular.js-->
+<!-- ionic/angularjs js -->
+<script src="lib/ionic/js/ionic.bundle.min.js"></script>
+<script src="lib/ionic/js/angular/angular-resource.min.js"></script>
+<!-- cordova script (this will be a 404 during development)  <script src="cordova.js"></script>-->
+<!-- Needed for Cordova/PhoneGap 
+      Observe também que o arquivo cordova.js ou phonegap.js deve ser o último script, e que este arquivo não será encontrado nos seus arquivos de desenvolvimento, mas sim incluídos automaticamente quando executar ou emulando seu aplicativo.
+  -->
+<script type="text/javascript" src="cordova.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/app-states.js"></script>
+<script src="js/home/appController.js"></script>
+<script src="js/home/homeController.js"></script>
+ <!-- SERVICES -->
+<script src="js/proposta/propostaService.js"></script>
+<script src="js/proposta/propostaController.js"></script>
+
+<script src="js/parcelamento/parcelamentoService.js"></script>
+<script src="js/parcelamento/parcelamentoController.js"></script>
+
+<script src="js/autorizacaoposvirtual/autorizacaoPOSService.js"></script>
+<script src="js/autorizacaoposvirtual/autorizacaoPOSController.js"></script>
+
+<script src="js/authentication/authenticationService.js"></script>
+<script src="js/authentication/authenticationController.js"></script>
+<script src="js/utils/utilsService.js"></script>
+
+ <!-- CONTROLLERS -->
+</head>
+
+<body ng-app="app">
+	
+	<div ng-controller="AppController">
+     <div class="bar bar-loading bar-assertive" ng-if="data.isLoading">
+      Loading...
+    </div>
+
+      <ion-nav-view animation="slide-left-right-ios7"></ion-nav-view>
+       <!-- ou   ALL VIEW STATES LOADED IN HERE 
+    <nav-view></nav-view>-->
+    </div>
+</body>
+</html>

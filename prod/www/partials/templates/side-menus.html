@@ -1,0 +1,76 @@
+<!-- note that ionic will likely remove the need to have the encapsulating single quotes around the view title in their next stable release 
+<ion-side-menus>
+  
+  <!-- CENTER CONTENT 
+  <ion-pane ion-side-menu-content drag-content="false">
+    <ion-nav-view name="main"></ion-nav-view>
+  </ion-pane>-->
+ 
+  <!-- LEFT SIDE MENU 
+  <ion-side-menu side="left">
+    <ion-nav-view name="left"></ion-nav-view>
+  </ion-side-menu>-->
+ 
+  <!-- RIGHT SIDE MENU 
+  <ion-side-menu side="right">
+    <ion-nav-view name="right"></ion-nav-view>
+  </ion-side-menu>
+ 
+</ion-side-menus>-->
+
+
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="main" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <!-- LEFT SIDE MENU 
+  <ion-side-menu side="left">
+    <ion-nav-view name="left"></ion-nav-view>
+  </ion-side-menu>-->
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Menu</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list class="list">
+       <ion-item nav-clear menu-close ui-sref="app.home">
+          Home
+        </ion-item>
+        
+        
+        <ion-item nav-clear menu-close href="#/proposta/list">
+          Proposta
+        </ion-item>
+
+         <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/search">
+                      <i class="icon ion-search"></i>Search
+         </ion-item>
+
+       <ion-item item-type="item-icon-left" nav-clear menu-close ui-sref="parcelamento.simula">
+         Simula Parcelamento
+        </ion-item>
+
+        <ion-item item-type="item-icon-left" nav-clear menu-close ui-sref="parcelamento.consulta">
+         consulta Plano Parcelamento
+        </ion-item>
+
+        <ion-item item-type="item-icon-left" nav-clear menu-close ui-sref="app.logout">
+          <i class="icon ion-log-out"></i>Logout
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+<!--RIGHT SIDE MENU -->
+  <ion-side-menu side="right">
+    <ion-nav-view name="right"></ion-nav-view>
+  </ion-side-menu>
+
+</ion-side-menus>

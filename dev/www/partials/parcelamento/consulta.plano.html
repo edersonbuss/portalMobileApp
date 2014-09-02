@@ -1,0 +1,66 @@
+
+ <!--  
+  <script id="contact.html" type="text/ng-template">
+      <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+        <ion-nav-back-button class="button-icon ion-arrow-left-c">
+        </ion-nav-back-button>
+      </ion-nav-bar> 
+      <ion-view title="Contact">
+
+        <ion-content>
+          <p>@IonicFramework</p>
+          <p>@DriftyCo</p>
+        </ion-content>
+      </ion-view>
+    </script>-->
+
+
+      <ion-view title="Consulta Plano">
+     	 <ion-nav-bar class="bar-positive">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+          </button> 
+          <ion-nav-back-button class="button-icon ion-arrow-left-c">
+          </ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-content padding="true">
+         <h1>Consulta Plano</h1>
+         cnpj=88957659003105&cpf=10497725126
+         &valor_transacao=500&
+         valor_entrada=100&
+         tipo_transacao=TP_TRANSACAO_PARC_SEM_JUROS&
+         numero_cartao=1111222233334444
+         <form >
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="Inform o nome o cnpj?" ng-model="filtro.cnpj">
+            </label>
+
+            <label class="item item-input">
+              <input type="text" placeholder="Inform o cpf?" ng-model="filtro.cpf">
+            </label>
+
+            <label class="item item-input">
+              <input type="text" placeholder="Inform o valor_transacao?" ng-model="filtro.valor_transacao">
+            </label>
+             <label class="item item-input">
+              <input type="text" placeholder="Inform o valor_entrada?" ng-model="filtro.valor_entrada">
+            </label>
+             <label class="item item-input">
+              <input type="text" placeholder="Inform o tipo_transacao?" ng-model="filtro.tipo_transacao">
+            </label>
+             <label class="item item-input">
+              <input type="text" placeholder="Inform o numero_cartao?" ng-model="filtro.numero_cartao">
+            </label>
+          </div>
+          <div class="padding">
+            <button ui-sref ="parcelamento.consultaplano.list({cnpj: filtro.cnpj,cpf:filtro.cpf,valor_transacao:filtro.valor_transacao,valor_entrada:filtro.valor_entrada,tipo_transacao:filtro.tipo_transacao,numero_cartao:filtro.numero_cartao})"  class="button icon icon-right ion-chevron-right">Simula </button>
+          </div>
+        </form>
+    
+    
+       
+        
+          
+        </ion-content>
+      </ion-view>
+<ion-nav-view name="list-tab"></ion-nav-view>
